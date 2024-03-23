@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #313A3A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mendoza.gestiondebiblioteca.controllers.MenuAdminController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/pngwing.com.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="178.0" text="administrador" textFill="#ff00ea">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buscarBtn" contentDisplay="TOP" layoutX="243.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onClickedBuscarBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #D9FFCD;" text="Buscar Libro">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/buscarLibro.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="salirBtn" layoutX="396.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: red;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buscarusBtn" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="102.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onClickedBuscarusBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #C7F5F2;" text="Buscar Usuario" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/buscarUsuario.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="mostrarBtn" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="385.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onClickedMostrarBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #C7F5F2;" text="Mostrar Libros" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/actualizarLibros.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="mostrarusuBtn" contentDisplay="TOP" layoutX="527.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onClickedMostrarusuBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #D9FFCD;" text="Mostrar Usuarios">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/mostrarUsuario.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="prestamoBtn" contentDisplay="TOP" layoutX="668.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onClickedPrestamoBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #FFFBA3;" text="Hacer prestamos">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/prestamos.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

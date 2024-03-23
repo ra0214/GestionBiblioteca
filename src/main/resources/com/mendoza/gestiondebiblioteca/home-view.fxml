@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #313A3A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mendoza.gestiondebiblioteca.controllers.HomeController">
+   <children>
+      <Button fx:id="superBtn" contentDisplay="TOP" layoutX="94.0" layoutY="161.0" mnemonicParsing="false" onAction="#onClickedSuperBtn" prefHeight="278.0" prefWidth="278.0" style="-fx-background-color: #BFDAB6;" text="superAdministrador" textFill="#a430a6">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="102.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/pngwing.com.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="adminBtn" contentDisplay="TOP" layoutX="539.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#onClickedAdminBtn" prefHeight="278.0" prefWidth="278.0" style="-fx-background-color: #F7BBE1;" text="Administrador" textFill="#a430a6">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="200.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/pngwing.com.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="317.0" layoutY="79.0" style="-fx-background-color: #ffffff;" text="Menú de usuario" textFill="#3d83a9">
+         <font>
+            <Font name="Gill Sans MT Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="salirBtn" layoutX="391.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#onClickedSalirBtn" prefHeight="48.0" prefWidth="118.0" style="-fx-background-color: #85C1E9;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
