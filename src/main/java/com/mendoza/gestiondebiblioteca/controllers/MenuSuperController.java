@@ -107,7 +107,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedEliminarBtn(MouseEvent event) {
+    void onClickedEliminarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("eliminarLbro-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Eliminar Libro");
+        stage.show();
     }
 
     @FXML
