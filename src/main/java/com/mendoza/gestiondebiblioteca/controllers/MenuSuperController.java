@@ -65,7 +65,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedActualizarBtn(MouseEvent event) {
+    void onClickedActualizarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("actualizarDatos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Actualizar Datos");
+        stage.show();
     }
 
     @FXML
@@ -99,7 +108,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedBuscarBtn(MouseEvent event) {
+    void onClickedBuscarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("buscarLibro-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Buscar Libro");
+        stage.show();
     }
 
     @FXML
@@ -111,7 +129,7 @@ public class MenuSuperController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("eliminarLbro-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("eliminarLibro-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
@@ -133,7 +151,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedMostrarBtn(MouseEvent event) {
+    void onClickedMostrarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarLibros-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Mostrar Libros");
+        stage.show();
     }
 
     @FXML

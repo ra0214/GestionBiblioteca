@@ -12,10 +12,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class EliminarLibroController {
+public class BuscarLibroController {
 
     @FXML
     private TextField autorTxt;
+
+    @FXML
+    private TextField editorialTxt1;
 
     @FXML
     private Button eliminarBtn;
@@ -45,6 +48,7 @@ public class EliminarLibroController {
         stage.setScene(scene);
         stage.setTitle("Menú De Super Administrador");
         stage.show();
+
     }
 
 }

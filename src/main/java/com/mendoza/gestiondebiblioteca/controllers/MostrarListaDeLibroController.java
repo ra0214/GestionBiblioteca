@@ -5,26 +5,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class EliminarLibroController {
-
-    @FXML
-    private TextField autorTxt;
+public class MostrarListaDeLibroController {
 
     @FXML
     private Button eliminarBtn;
 
     @FXML
     private AnchorPane fondo;
-
-    @FXML
-    private TextField nomlibroTxt;
 
     @FXML
     private Button salirBtn;
@@ -45,6 +38,7 @@ public class EliminarLibroController {
         stage.setScene(scene);
         stage.setTitle("Menú De Super Administrador");
         stage.show();
+
     }
 
 }
