@@ -73,12 +73,21 @@ public class MenuSuperController {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Actualizar Datos");
+        stage.setTitle("Actualizar Datos del Libro");
         stage.show();
     }
 
     @FXML
-    void onClickedActualizarusuBtn(MouseEvent event) {
+    void onClickedActualizarusuBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("actualizarDatosUsuario-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Actualizar Datos del Usuario");
+        stage.show();
     }
 
     @FXML
@@ -121,7 +130,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedBuscarusBtn(MouseEvent event) {
+    void onClickedBuscarusBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("buscarUsuario-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Buscar Usuario");
+        stage.show();
     }
 
     @FXML
@@ -164,7 +182,16 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedMostrarusuBtn(MouseEvent event) {
+    void onClickedMostrarusuBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarUsuarios-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Mostrar Usuarios");
+        stage.show();
     }
 
     @FXML
