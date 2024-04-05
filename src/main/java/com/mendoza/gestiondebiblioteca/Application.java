@@ -1,6 +1,7 @@
 package com.mendoza.gestiondebiblioteca;
 
 import com.mendoza.gestiondebiblioteca.models.Biblioteca;
+import com.mendoza.gestiondebiblioteca.models.Libro;
 import com.mendoza.gestiondebiblioteca.models.Persona;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +14,8 @@ public class Application extends javafx.application.Application {
     private static Biblioteca usuarios = new Biblioteca();
 
     private static Persona persona = new Persona();
+
+    private static Libro libro = new Libro();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -29,6 +32,10 @@ public class Application extends javafx.application.Application {
 
     public static Persona getPersona() {
         return persona;
+    }
+
+    public static Libro getLibro() {
+        return libro;
     }
 
     public static void main(String[] args) {

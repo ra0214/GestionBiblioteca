@@ -25,47 +25,47 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="120.0" layoutY="172.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
+      <Label layoutX="120.0" layoutY="210.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="240.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea">
+      <Label layoutX="120.0" layoutY="278.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="283.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea">
+      <Label layoutX="120.0" layoutY="321.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="323.0" prefHeight="42.0" prefWidth="238.0" text="Ingrese    la    fecha    de" textFill="#ff00ea">
+      <Label layoutX="120.0" layoutY="398.0" prefHeight="42.0" prefWidth="238.0" text="Ingrese    la    fecha    de" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="350.0" prefHeight="27.0" prefWidth="238.0" text="publicación del libro" textFill="#ff00ea">
+      <Label layoutX="120.0" layoutY="429.0" prefHeight="27.0" prefWidth="238.0" text="publicación del libro" textFill="#ff00ea">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nomlibroTxt" layoutX="450.0" layoutY="166.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro">
+      <TextField fx:id="nomlibroTxt" layoutX="450.0" layoutY="204.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="autorTxt" layoutX="450.0" layoutY="223.0" prefHeight="34.0" prefWidth="315.0" promptText="Autor del libro">
+      <TextField fx:id="autorTxt" layoutX="450.0" layoutY="261.0" prefHeight="34.0" prefWidth="315.0" promptText="Autor del libro">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="editorialTxt" layoutX="450.0" layoutY="277.0" prefHeight="34.0" prefWidth="315.0" promptText="Editorial del libro">
+      <TextField fx:id="editorialTxt" layoutX="450.0" layoutY="315.0" prefHeight="34.0" prefWidth="315.0" promptText="Editorial del libro">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="fechaTxt" layoutX="450.0" layoutY="333.0" prefHeight="34.0" prefWidth="315.0" promptText="Fecha de publicación">
+      <TextField fx:id="fechaTxt" layoutX="450.0" layoutY="412.0" prefHeight="34.0" prefWidth="315.0" promptText="Fecha de publicación">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
@@ -75,5 +75,25 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
+      <TextField fx:id="idTxt" layoutX="449.0" layoutY="155.0" prefHeight="34.0" prefWidth="315.0" promptText="ID">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="120.0" layoutY="160.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el ID" textFill="#ff00ea">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cantidadTxt" layoutX="449.0" layoutY="363.0" prefHeight="34.0" prefWidth="315.0" promptText="Cantidad de libro">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="113.0" layoutY="368.0" prefHeight="23.0" prefWidth="238.0" text="Cantidad de  libro" textFill="#ff00ea">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
