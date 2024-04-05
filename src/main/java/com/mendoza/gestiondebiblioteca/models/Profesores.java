@@ -15,6 +15,10 @@ public class Profesores extends Persona{
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getArea() {
         return area;
     }

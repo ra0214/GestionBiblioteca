@@ -25,7 +25,7 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="94.0" layoutY="288.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea">
+      <Label fx:id="nameLabel" layoutX="94.0" layoutY="288.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
@@ -40,5 +40,65 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
+      <Button fx:id="regresarBtn" layoutX="538.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#OnClickedRegresarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="nombreLabel" layoutX="130.0" layoutY="206.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="apellidoLabel" layoutX="130.0" layoutY="262.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese los apellidos" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="edadLabel" layoutX="130.0" layoutY="317.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la edad del usuario" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombresTxt" layoutX="460.0" layoutY="200.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre(s)" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="apellidosTxt" layoutX="460.0" layoutY="257.0" prefHeight="34.0" prefWidth="315.0" promptText="Apellidos" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="edadTxt" layoutX="460.0" layoutY="311.0" prefHeight="34.0" prefWidth="315.0" promptText="Edad" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="agregarBtn" layoutX="289.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#OnClickedAgregarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Actualizar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="gradoLabel" alignment="TOP_LEFT" layoutX="130.0" layoutY="374.0" prefHeight="53.0" prefWidth="238.0" text="Ingrese el grado que cursa el alumno" textAlignment="CENTER" textFill="#ff00ea" visible="false" wrapText="true">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gradoTxt" layoutX="459.0" layoutY="373.0" prefHeight="34.0" prefWidth="315.0" promptText="Grado" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="idLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="155.0" prefHeight="23.0" prefWidth="238.0" text="Id" textAlignment="CENTER" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTxt" editable="false" layoutX="459.0" layoutY="149.0" prefHeight="34.0" prefWidth="315.0" promptText="Id" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
