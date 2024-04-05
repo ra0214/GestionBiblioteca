@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,27 +11,36 @@
    <children>
       <ImageView fitHeight="117.0" fitWidth="108.0" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@imagenes/mostrarUsuario.png" />
+            <Image url="@imagenes/buscarUsuario.png" />
          </image>
       </ImageView>
-      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="249.0" text="Mostrar Lista De Usuarios" textFill="#ff00ea">
+      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="178.0" text="Mostrar Usuarios" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="salirBtn" layoutX="370.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Volver al menú" textFill="WHITE" AnchorPane.rightAnchor="371.6">
+      <Button fx:id="salirBtn" layoutX="371.0" layoutY="484.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Volver al menú" textFill="WHITE" AnchorPane.rightAnchor="370.6">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="mostrarTable" layoutX="259.0" layoutY="200.0" prefHeight="200.0" prefWidth="379.0">
-        <columns>
-            <TableColumn fx:id="idcolumn" prefWidth="75.0" text="Id" />
-          <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre(s)" />
-          <TableColumn fx:id="apellidoColumn" prefWidth="75.0" text="Apellido" />
-            <TableColumn fx:id="edadColumn" prefWidth="75.0" text="Edad" />
-            <TableColumn fx:id="gradoColumn" prefWidth="75.0" text="Grado" />
-        </columns>
-      </TableView>
+      <Button fx:id="alumnoBtn" contentDisplay="TOP" layoutX="160.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#onClickAlumnoBtn" prefHeight="122.0" prefWidth="178.0" style="-fx-background-color: #E5F7CB;" text="Buscar Alumno" textAlignment="JUSTIFY">
+         <graphic>
+            <ImageView fitHeight="117.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/AgregarAlumno.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="profesorBtn" contentDisplay="TOP" layoutX="615.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#onClickProfesorBtn" prefHeight="122.0" prefWidth="178.0" style="-fx-background-color: #CBF6F7;" text="Buscar Profesor" textAlignment="JUSTIFY">
+         <graphic>
+            <ImageView fitHeight="117.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/AgregarProfesor.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

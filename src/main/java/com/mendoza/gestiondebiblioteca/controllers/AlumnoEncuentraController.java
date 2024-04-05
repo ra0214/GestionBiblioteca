@@ -16,16 +16,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class AlumnoActualizarController {
+public class AlumnoEncuentraController {
 
     @FXML
-    private Button agregarBtn;
-
-    @FXML
-    private Label apellidoLabel;
+    private Label apellidosLabel;
 
     @FXML
     private TextField apellidosTxt;
+
+    @FXML
+    private Button buscarBtn;
 
     @FXML
     private Label edadLabel;
@@ -49,12 +49,6 @@ public class AlumnoActualizarController {
     private TextField idTxt;
 
     @FXML
-    private Button mostrarBtn;
-
-    @FXML
-    private Label nameLabel;
-
-    @FXML
     private Label nombreLabel;
 
     @FXML
@@ -64,71 +58,10 @@ public class AlumnoActualizarController {
     private TextField nombresTxt;
 
     @FXML
-    private Button regresarBtn;
-
-    @FXML
     private Button salirBtn;
 
     @FXML
-    void OnClickedAgregarBtn(MouseEvent event) {
-        String id = idTxt.getText();
-        String nombre = nombresTxt.getText();
-        String apellidos = apellidosTxt.getText();
-        String edad = edadTxt.getText();
-        String grado = gradoTxt.getText();
-
-        if (!id.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !edad.isEmpty() && !grado.isEmpty()) {
-            ArrayList<Alumnos> listaAlumnos = Application.getPersona().getListaAlumnos();
-            int idBuscado = Integer.parseInt(id);
-
-            for (int i = 0; i < listaAlumnos.size(); i++) {
-                Alumnos alumno = listaAlumnos.get(i);
-                if (alumno.getId() == idBuscado) {
-
-                    alumno.setId(Integer.parseInt(id));
-                    alumno.setNombre(nombre);
-                    alumno.setApellidos(apellidos);
-                    alumno.setEdad(edad);
-                    alumno.setGrado(grado);
-
-                    listaAlumnos.set(i, alumno);
-
-                    mostrarAlerta("Actualización Exitosa", "Los datos del alumno han sido actualizados correctamente.");
-
-                    limpiarCampos();
-                    OnClickedRegresarBtn(null);
-                    return;
-                }
-            }
-            mostrarAlerta("Error", "No se encontró ningún alumno con ese id.");
-        } else {
-            mostrarAlerta("Error", "Por favor complete todos los campos.");
-        }
-    }
-
-    @FXML
-    void OnClickedRegresarBtn(MouseEvent event) {
-        idLabel.setVisible(false);
-        nombreLabel.setVisible(false);
-        apellidoLabel.setVisible(false);
-        edadLabel.setVisible(false);
-        gradoLabel.setVisible(false);
-        idTxt.setVisible(false);
-        nombresTxt.setVisible(false);
-        apellidosTxt.setVisible(false);
-        edadTxt.setVisible(false);
-        gradoTxt.setVisible(false);
-        agregarBtn.setVisible(false);
-        regresarBtn.setVisible(false);
-
-        nombreTxt.setVisible(true);
-        nameLabel.setVisible(true);
-        mostrarBtn.setVisible(true);
-        salirBtn.setVisible(true);
-    }
-
-    @FXML
-    void OnClickedMostrarBtn(MouseEvent event) throws IOException {
+    void OnClickedBuscarBtn(MouseEvent event) {
         String nombreBuscado = nombreTxt.getText();
         ArrayList<Alumnos> listaAlumnos = Application.getPersona().getListaAlumnos();
 
@@ -145,7 +78,7 @@ public class AlumnoActualizarController {
 
             idLabel.setVisible(true);
             nombreLabel.setVisible(true);
-            apellidoLabel.setVisible(true);
+            apellidosLabel.setVisible(true);
             edadLabel.setVisible(true);
             gradoLabel.setVisible(true);
             idTxt.setVisible(true);
@@ -153,8 +86,6 @@ public class AlumnoActualizarController {
             apellidosTxt.setVisible(true);
             edadTxt.setVisible(true);
             gradoTxt.setVisible(true);
-            agregarBtn.setVisible(true);
-            regresarBtn.setVisible(true);
 
             idTxt.setText(String.valueOf(alumnoEncontrado.getId()));
             nombresTxt.setText(alumnoEncontrado.getNombre());
@@ -162,10 +93,12 @@ public class AlumnoActualizarController {
             edadTxt.setText(alumnoEncontrado.getEdad());
             gradoTxt.setText(alumnoEncontrado.getGrado());
 
-            nombreTxt.setVisible(false);
-            nameLabel.setVisible(false);
-            mostrarBtn.setVisible(false);
-            salirBtn.setVisible(false);
+            System.out.println("Alumno encontrado:");
+            System.out.println("ID: " + alumnoEncontrado.getId());
+            System.out.println("Nombre: " + alumnoEncontrado.getNombre());
+            System.out.println("Apellidos: " + alumnoEncontrado.getApellidos());
+            System.out.println("Edad: " + alumnoEncontrado.getEdad());
+            System.out.println("Grado: " + alumnoEncontrado.getGrado());
         } else {
             mostrarAlerta("Error", "No se encontró ningún alumno con ese nombre.");
         }
@@ -177,11 +110,11 @@ public class AlumnoActualizarController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("actualizarDatosUsuario-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("buscaUsuario-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Actualizar Datos");
+        stage.setTitle("Buscar Usuario");
         stage.show();
     }
 
@@ -196,4 +129,5 @@ public class AlumnoActualizarController {
     private void limpiarCampos() {
         nombreTxt.clear();
     }
+
 }

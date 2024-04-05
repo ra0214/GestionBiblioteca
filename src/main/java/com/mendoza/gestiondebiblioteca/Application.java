@@ -26,10 +26,6 @@ public class Application extends javafx.application.Application {
         stage.show();
     }
 
-    public static Biblioteca getUsuario() {
-        return usuarios;
-    }
-
     public static Persona getPersona() {
         return persona;
     }

@@ -91,7 +91,7 @@ public class MenuAdminController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarUsuario-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarAlumno-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);

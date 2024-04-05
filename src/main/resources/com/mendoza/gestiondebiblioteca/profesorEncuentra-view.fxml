@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #313A3A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mendoza.gestiondebiblioteca.controllers.ProfesorEncuentraController">
+   <children>
+      <ImageView fitHeight="117.0" fitWidth="108.0" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/buscarUsuario.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="178.0" text="Buscar Profesor" textFill="#ff00ea">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="salirBtn" layoutX="528.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Volver al menú" textFill="WHITE" AnchorPane.rightAnchor="213.6">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buscarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedBuscarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Buscar" textFill="WHITE" AnchorPane.leftAnchor="213.6">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="130.0" layoutY="169.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreTxt" layoutX="459.0" layoutY="163.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre(s)">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="nombreLabel" layoutX="140.0" layoutY="287.0" prefHeight="23.0" prefWidth="238.0" text="Nombres" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombresTxt" editable="false" layoutX="469.0" layoutY="281.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="apellidosLabel" layoutX="140.0" layoutY="335.0" prefHeight="23.0" prefWidth="238.0" text="Apellidos" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apellidosTxt" editable="false" layoutX="469.0" layoutY="329.0" prefHeight="34.0" prefWidth="315.0" promptText="Apellidos" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="edadLabel" layoutX="140.0" layoutY="387.0" prefHeight="23.0" prefWidth="238.0" text="Edad" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="edadTxt" editable="false" layoutX="469.0" layoutY="381.0" prefHeight="34.0" prefWidth="315.0" promptText="Edad" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="areaLabel" layoutX="140.0" layoutY="433.0" prefHeight="23.0" prefWidth="238.0" text="Área" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="areaTxt" editable="false" layoutX="469.0" layoutY="427.0" prefHeight="34.0" prefWidth="315.0" promptText="Área" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="idLabel" layoutX="140.0" layoutY="245.0" prefHeight="23.0" prefWidth="238.0" text="Id" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTxt" editable="false" layoutX="469.0" layoutY="239.0" prefHeight="34.0" prefWidth="315.0" promptText="Id" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

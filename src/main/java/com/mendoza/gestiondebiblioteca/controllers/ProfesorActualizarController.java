@@ -80,10 +80,12 @@ public class ProfesorActualizarController {
 
         if (!id.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !edad.isEmpty() && !area.isEmpty()) {
             ArrayList<Profesores> listaProfesores = Application.getPersona().getListaProfesores();
+            int idBuscado = Integer.parseInt(id);
 
             for (int i = 0; i < listaProfesores.size(); i++) {
                 Profesores profesor = listaProfesores.get(i);
-                if (profesor.getNombre().equals(nombre)) {
+                if (profesor.getId() == idBuscado) {
+
                     profesor.setId(Integer.parseInt(id));
                     profesor.setNombre(nombre);
                     profesor.setApellidos(apellidos);
