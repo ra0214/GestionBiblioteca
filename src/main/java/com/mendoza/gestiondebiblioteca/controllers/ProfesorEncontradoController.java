@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -18,13 +19,43 @@ import java.util.ArrayList;
 public class ProfesorEncontradoController {
 
     @FXML
+    private Label apellidosLabel;
+
+    @FXML
+    private TextField apellidosTxt;
+
+    @FXML
+    private Label areaLabel;
+
+    @FXML
+    private TextField areaTxt;
+
+    @FXML
     private Button buscarBtn;
+
+    @FXML
+    private Label edadLabel;
+
+    @FXML
+    private TextField edadTxt;
 
     @FXML
     private AnchorPane fondo;
 
     @FXML
     private TextField nombreTxt;
+
+    @FXML
+    private Label idLabel;
+
+    @FXML
+    private TextField idTxt;
+
+    @FXML
+    private Label nombreLabel;
+
+    @FXML
+    private TextField nombresTxt;
 
     @FXML
     private Button salirBtn;
@@ -45,7 +76,25 @@ public class ProfesorEncontradoController {
         if (profesorEncontrado != null) {
             mostrarAlerta("Búsqueda Exitosa", "Se encontró el profesor buscado");
 
-            System.out.println("Alumno encontrado:");
+            idLabel.setVisible(true);
+            nombreLabel.setVisible(true);
+            apellidosLabel.setVisible(true);
+            edadLabel.setVisible(true);
+            areaLabel.setVisible(true);
+            idTxt.setVisible(true);
+            nombresTxt.setVisible(true);
+            apellidosTxt.setVisible(true);
+            edadTxt.setVisible(true);
+            areaTxt.setVisible(true);
+
+            idTxt.setText(String.valueOf(profesorEncontrado.getId()));
+            nombresTxt.setText(profesorEncontrado.getNombre());
+            apellidosTxt.setText(profesorEncontrado.getApellidos());
+            edadTxt.setText(profesorEncontrado.getEdad());
+            areaTxt.setText(profesorEncontrado.getArea());
+
+            System.out.println("Profesor encontrado:");
+            System.out.println("ID: " + profesorEncontrado.getId());
             System.out.println("Nombre: " + profesorEncontrado.getNombre());
             System.out.println("Apellidos: " + profesorEncontrado.getApellidos());
             System.out.println("Edad: " + profesorEncontrado.getEdad());

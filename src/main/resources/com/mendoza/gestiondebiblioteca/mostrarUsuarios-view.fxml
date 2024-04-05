@@ -26,11 +26,13 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="mostrarTable" layoutX="336.0" layoutY="200.0" prefHeight="200.0" prefWidth="228.0">
+      <TableView fx:id="mostrarTable" layoutX="259.0" layoutY="200.0" prefHeight="200.0" prefWidth="379.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nombre(s)" />
-          <TableColumn prefWidth="75.0" text="Apellido" />
-            <TableColumn prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="idcolumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre(s)" />
+          <TableColumn fx:id="apellidoColumn" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="edadColumn" prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="gradoColumn" prefWidth="75.0" text="Grado" />
         </columns>
       </TableView>
    </children>

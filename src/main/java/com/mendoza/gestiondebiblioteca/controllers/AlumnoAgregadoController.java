@@ -53,6 +53,7 @@ public class AlumnoAgregadoController {
             mostrarAlerta("Éxito", "Se ha agregado un nuevo usuario.");
 
             System.out.println("Se ha agregado un nuevo usuario:");
+            System.out.println("ID: " + alumno.getId());
             System.out.println("Nombre: " + alumno.getNombre());
             System.out.println("Apellidos: " + alumno.getApellidos());
             System.out.println("Edad: " + alumno.getEdad());
