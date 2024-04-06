@@ -15,7 +15,7 @@
             <Image url="@imagenes/actualizarLibros.png" />
          </image>
       </ImageView>
-      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="178.0" text="Actualizar Datos Del Libro" textFill="#ff00ea">
+      <Label layoutX="150.0" layoutY="67.0" prefHeight="23.0" prefWidth="238.0" text="Actualizar Datos Del Libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
@@ -25,20 +25,95 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="182.0" layoutY="214.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
+      <Label fx:id="idLabel" layoutX="182.0" layoutY="214.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el ID del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nomlibroTxt" layoutX="449.0" layoutY="208.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro">
+      <TextField fx:id="idTxt" layoutX="449.0" layoutY="208.0" prefHeight="34.0" prefWidth="315.0" promptText="ID">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="eliminarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedEliminarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Buscar Libro" textFill="WHITE" AnchorPane.leftAnchor="213.6">
+      <Button fx:id="mostrarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedMostrarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Mostrar Datos" textFill="WHITE" AnchorPane.leftAnchor="213.6">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Button>
+      <Button fx:id="actualizarBtn" layoutX="258.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#OnClickedActualizarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Actualizar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="regresarBtn" layoutX="507.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#OnClickedRegresarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="tituloLabel" layoutX="130.0" layoutY="197.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="autorLabel" layoutX="130.0" layoutY="265.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="EditorialLabel" layoutX="130.0" layoutY="308.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fechaLabel" layoutX="130.0" layoutY="385.0" prefHeight="42.0" prefWidth="238.0" text="Ingrese    la    fecha    de" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fechaLabel1" layoutX="130.0" layoutY="416.0" prefHeight="27.0" prefWidth="238.0" text="publicación del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomlibroTxt" layoutX="460.0" layoutY="191.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="autorTxt" layoutX="460.0" layoutY="248.0" prefHeight="34.0" prefWidth="315.0" promptText="Autor del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editorialTxt" layoutX="460.0" layoutY="302.0" prefHeight="34.0" prefWidth="315.0" promptText="Editorial del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="fechaTxt" layoutX="460.0" layoutY="399.0" prefHeight="34.0" prefWidth="315.0" promptText="Fecha de publicación" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="midTxt" layoutX="459.0" layoutY="142.0" prefHeight="34.0" prefWidth="315.0" promptText="ID" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="midLabel" layoutX="130.0" layoutY="147.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el ID" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cantidadTxt" layoutX="459.0" layoutY="350.0" prefHeight="34.0" prefWidth="315.0" promptText="Cantidad de libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="cantidadLabel" layoutX="123.0" layoutY="355.0" prefHeight="23.0" prefWidth="238.0" text="Cantidad de  libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
