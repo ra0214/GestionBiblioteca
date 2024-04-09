@@ -70,8 +70,8 @@ public class MostrarAlumnoController implements Initializable {
         this.apellidoColumn.setCellValueFactory(new PropertyValueFactory("apellidos"));
         this.edadColumn.setCellValueFactory(new PropertyValueFactory("edad"));
         this.gradoColumn.setCellValueFactory(new PropertyValueFactory("grado"));
-
-        mostrarTable.setItems(alumnosList);
+        ObservableList<Alumnos> list = FXCollections.observableArrayList(Application.getListaAlumnos());
+        mostrarTable.setItems(list);
     }
 
     public void agregarAlumno(Alumnos alumno) {

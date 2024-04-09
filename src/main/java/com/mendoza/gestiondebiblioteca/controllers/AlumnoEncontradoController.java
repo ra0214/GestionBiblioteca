@@ -128,4 +128,8 @@ public class AlumnoEncontradoController {
     private void limpiarCampos() {
         nombreTxt.clear();
     }
+
+    public void initialize() {
+
+    }
 }

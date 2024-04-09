@@ -2,6 +2,8 @@ package com.mendoza.gestiondebiblioteca.controllers;
 
 import com.mendoza.gestiondebiblioteca.Application;
 import com.mendoza.gestiondebiblioteca.models.Libro;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -106,6 +108,8 @@ public class AgregarLibroController implements Initializable {
         this.editorialColumn.setCellValueFactory(new PropertyValueFactory<>("editorial"));
         this.cantidadColumn.setCellValueFactory(new PropertyValueFactory<>("cantidadDisponible"));
         this.fechaColumn.setCellValueFactory(new PropertyValueFactory<>("fechaPublicacion"));
+        ObservableList<Libro> lista = FXCollections.observableArrayList(Application.getLibros());
+        tabla.setItems(lista);
     }
 
 

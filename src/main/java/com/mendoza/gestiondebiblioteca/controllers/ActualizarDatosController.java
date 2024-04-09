@@ -104,6 +104,12 @@ public class ActualizarDatosController {
 
                     list.set(i, libro);
 
+                    System.out.println("Título: "+libro.getTitulo());
+                    System.out.println("Autor: "+libro.getAutor());
+                    System.out.println("Editorial: "+libro.getEditorial());
+                    System.out.println("Cantidad: "+libro.getCantidadDisponible());
+                    System.out.println("Fecha: "+libro.getFechaPublicacion());
+
                     mostrarAlerta("Actualización Exitosa", "Los datos del libro han sido actualizados correctamente.");
 
 
