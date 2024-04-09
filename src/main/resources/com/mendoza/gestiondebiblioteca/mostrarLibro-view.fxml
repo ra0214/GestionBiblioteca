@@ -21,23 +21,19 @@
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="salirBtn" layoutX="528.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Volver al menú" textFill="WHITE" AnchorPane.rightAnchor="213.6">
+      <Button fx:id="salirBtn" layoutX="370.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedSalirBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: red;" text="Volver al menú" textFill="WHITE" AnchorPane.rightAnchor="371.6">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="eliminarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedEliminarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Mostrar Libros" textFill="WHITE" AnchorPane.leftAnchor="213.6">
-         <font>
-            <Font name="Century" size="18.0" />
-         </font>
-      </Button>
-      <TableView layoutX="239.0" layoutY="167.0" prefHeight="265.0" prefWidth="485.0">
+      <TableView fx:id="tabla" layoutX="182.0" layoutY="167.0" prefHeight="266.0" prefWidth="536.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Libros" />
-          <TableColumn prefWidth="75.0" text="Autor" />
-            <TableColumn prefWidth="75.0" text="Editorial" />
-            <TableColumn prefWidth="75.0" text="Cantidad " />
-            <TableColumn prefWidth="183.99996337890627" text="Fecha de publicación " />
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tituloColumn" prefWidth="75.0" text="Título" />
+          <TableColumn fx:id="autorColumn" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="editorialColumn" prefWidth="75.0" text="Editorial" />
+            <TableColumn fx:id="cantidadColumn" prefWidth="75.0" text="Cantidad " />
+            <TableColumn fx:id="fechaColumn" prefWidth="183.99996337890627" text="Fecha de publicación " />
         </columns>
       </TableView>
    </children>

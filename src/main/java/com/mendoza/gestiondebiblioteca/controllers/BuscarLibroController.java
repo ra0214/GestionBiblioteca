@@ -2,6 +2,7 @@ package com.mendoza.gestiondebiblioteca.controllers;
 
 import com.mendoza.gestiondebiblioteca.Application;
 import com.mendoza.gestiondebiblioteca.models.Libro;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -71,11 +72,12 @@ public class BuscarLibroController {
 
     @FXML
     void OnClickedBuscarBtn(MouseEvent event) {
-        String idbuscado = idTxt.getText();
-        ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        String idbuscado = this.idTxt.getText();
+        ObservableList<Libro> list = Application.getLibros();
+        //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
 
         Libro libroEncontrado = null;
-        for (Libro libros : listaLibros) {
+        for (Libro libros : list) {
             if (libros.getId().equals(idbuscado)){
                 libroEncontrado = libros;
                 break;

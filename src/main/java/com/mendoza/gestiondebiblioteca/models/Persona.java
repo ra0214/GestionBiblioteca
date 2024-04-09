@@ -26,8 +26,8 @@ public class Persona {
 
     public Persona(String nombre, String apellidos, String edad) {
         this.nombre = nombre;
-        this.edad = edad;
         this.apellidos = apellidos;
+        this.edad = edad;
     }
     public String getNombre() {
         return nombre;

@@ -2,6 +2,7 @@ package com.mendoza.gestiondebiblioteca.controllers;
 
 import com.mendoza.gestiondebiblioteca.Application;
 import com.mendoza.gestiondebiblioteca.models.Libro;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -88,27 +89,30 @@ public class ActualizarDatosController {
         String fecha = fechaTxt.getText();
 
         if (!id.isEmpty() && !titulo.isEmpty() && !autor.isEmpty() && !editorial.isEmpty() && !cantidad.isEmpty() && !fecha.isEmpty()) {
-            ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
-            int idBuscado = Integer.parseInt(id);
+            ObservableList<Libro> list = Application.getLibros();
+            //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
 
-            for (int i = 0; i < listaLibros.size(); i++) {
-                Libro libro = listaLibros.get(i);
-                    libro.setId(id);
+            //Libro libroActualizado = null;
+            for (int i =0; i<list.size();i++) {
+                Libro libro = list.get(i);
+                if (libro.getId().equals(id)) {
                     libro.setTitulo(titulo);
                     libro.setAutor(autor);
                     libro.setEditorial(editorial);
                     libro.setCantidadDisponible(cantidad);
                     libro.setFechaPublicacion(fecha);
 
-                    listaLibros.set(i, libro);
+                    list.set(i, libro);
 
                     mostrarAlerta("Actualización Exitosa", "Los datos del libro han sido actualizados correctamente.");
 
+
                     limpiarCampos();
-                    OnClickedRegresarBtn(null);
                     return;
                 }
-            } else {
+            }
+            mostrarAlerta("Error", "No se encontró ningún libro con ese id");
+        } else {
             mostrarAlerta("Error", "Por favor complete todos los campos.");
         }
     }
@@ -116,10 +120,11 @@ public class ActualizarDatosController {
     @FXML
     void OnClickedMostrarBtn(MouseEvent event) {
         String idBuscado = idTxt.getText();
-        ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        ObservableList<Libro> list = Application.getLibros();
 
         Libro libroEncontrado = null;
-        for (Libro libros : listaLibros) {
+        for (Libro libros : list) {
             if (libros.getId().equals(idBuscado)) {
                 libroEncontrado = libros;
                 break;
@@ -177,6 +182,13 @@ public class ActualizarDatosController {
         fechaTxt.setVisible(false);
         regresarBtn.setVisible(false);
         actualizarBtn.setVisible(false);
+
+        midTxt.clear();
+        nomlibroTxt.clear();
+        autorTxt.clear();
+        editorialTxt.clear();
+        cantidadTxt.clear();
+        fechaTxt.clear();
 
         idTxt.setVisible(true);
         idLabel.setVisible(true);

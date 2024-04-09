@@ -2,6 +2,7 @@ package com.mendoza.gestiondebiblioteca.controllers;
 
 import com.mendoza.gestiondebiblioteca.Application;
 import com.mendoza.gestiondebiblioteca.models.Libro;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -37,10 +38,11 @@ public class EliminarLibroController {
         String titulo = nomlibroTxt.getText();
         String autor = autorTxt.getText();
 
-        ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        ObservableList<Libro> list = Application.getLibros();
 
         Libro libroEliminar = null;
-        for (Libro libro : listaLibros) {
+        for (Libro libro : list) {
             if (libro.getTitulo().equals(titulo) && libro.getAutor().equals(autor)) {
                 libroEliminar = libro;
                 break;
@@ -48,7 +50,7 @@ public class EliminarLibroController {
         }
 
         if (libroEliminar != null){
-            listaLibros.remove(libroEliminar);
+            list.remove(libroEliminar);
             mostrarAlerta("Éxito", "Se ha eliminado el libro correctamente.");
         } else {
             mostrarAlerta("Error", "No se encontró un libro con ese título y autor.");

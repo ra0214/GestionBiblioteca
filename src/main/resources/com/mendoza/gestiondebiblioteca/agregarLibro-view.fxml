@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -25,27 +27,27 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="120.0" layoutY="210.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
+      <Label fx:id="name" layoutX="120.0" layoutY="210.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="278.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea">
+      <Label fx:id="autor" layoutX="120.0" layoutY="278.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="321.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea">
+      <Label fx:id="edit" layoutX="120.0" layoutY="321.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="398.0" prefHeight="42.0" prefWidth="238.0" text="Ingrese    la    fecha    de" textFill="#ff00ea">
+      <Label fx:id="fech" layoutX="120.0" layoutY="398.0" prefHeight="42.0" prefWidth="238.0" text="Ingrese    la    fecha    de" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="429.0" prefHeight="27.0" prefWidth="238.0" text="publicación del libro" textFill="#ff00ea">
+      <Label fx:id="fecha" layoutX="120.0" layoutY="429.0" prefHeight="27.0" prefWidth="238.0" text="publicación del libro" textFill="#ff00ea">
          <font>
             <Font size="18.0" />
          </font>
@@ -80,7 +82,7 @@
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="120.0" layoutY="160.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el ID" textFill="#ff00ea">
+      <Label fx:id="id" layoutX="120.0" layoutY="160.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el ID" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
@@ -90,10 +92,22 @@
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="113.0" layoutY="368.0" prefHeight="23.0" prefWidth="238.0" text="Cantidad de  libro" textFill="#ff00ea">
+      <Label fx:id="cant" layoutX="113.0" layoutY="368.0" prefHeight="23.0" prefWidth="238.0" text="Cantidad de  libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="verBtn" layoutX="582.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVerBtn" prefHeight="34.0" prefWidth="118.0" text="Ver tabla" />
+      <TableView fx:id="tabla" layoutX="192.0" layoutY="177.0" prefHeight="266.0" prefWidth="536.0" visible="false">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="tituloColumn" prefWidth="75.0" text="Título" />
+            <TableColumn fx:id="autorColumn" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="editorialColumn" prefWidth="75.0" text="Editorial" />
+            <TableColumn fx:id="cantidadColumn" prefWidth="75.0" text="Cantidad " />
+            <TableColumn fx:id="fechaColumn" prefWidth="183.99996337890627" text="Fecha de publicación" />
+         </columns>
+      </TableView>
+      <Button fx:id="volverBtn" layoutX="582.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVolverBtn" prefHeight="34.0" prefWidth="118.0" text="Regresar" visible="false" />
    </children>
 </AnchorPane>

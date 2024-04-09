@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class BuscaUsuarioController {
+public class UsuarioBuscadoController {
 
     @FXML
     private Button alumnoBtn;

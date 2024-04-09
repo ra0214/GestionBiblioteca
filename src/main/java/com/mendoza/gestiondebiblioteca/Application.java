@@ -1,21 +1,26 @@
 package com.mendoza.gestiondebiblioteca;
 
-import com.mendoza.gestiondebiblioteca.models.Biblioteca;
-import com.mendoza.gestiondebiblioteca.models.Libro;
-import com.mendoza.gestiondebiblioteca.models.Persona;
+import com.mendoza.gestiondebiblioteca.models.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Application extends javafx.application.Application {
-
-    private static Biblioteca usuarios = new Biblioteca();
 
     private static Persona persona = new Persona();
 
     private static Libro libro = new Libro();
+
+    private static Prestamos prestamo = new Prestamos();
+
+    private static ArrayList<Alumnos> listaAlumnos = new ArrayList<>();
+
+    private static ObservableList<Libro> libros = FXCollections.observableArrayList();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,12 +31,28 @@ public class Application extends javafx.application.Application {
         stage.show();
     }
 
+    public static void agregarAlumno(Alumnos alumno) {
+        listaAlumnos.add(alumno);
+    }
+
+    public static ArrayList<Alumnos> getListaAlumnos() {
+        return listaAlumnos;
+    }
+
     public static Persona getPersona() {
         return persona;
     }
 
     public static Libro getLibro() {
         return libro;
+    }
+
+    public static Prestamos getPrestamo() {
+        return prestamo;
+    }
+
+    public static ObservableList<Libro> getLibros() {
+        return libros;
     }
 
     public static void main(String[] args) {

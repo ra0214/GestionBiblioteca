@@ -110,7 +110,7 @@ public class AlumnoEncuentraController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("buscaUsuario-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("usuarioBuscado-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);

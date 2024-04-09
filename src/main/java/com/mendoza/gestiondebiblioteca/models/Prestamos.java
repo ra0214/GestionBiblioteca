@@ -1,14 +1,26 @@
 package com.mendoza.gestiondebiblioteca.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Prestamos {
     private Persona persona;
     private Libro libro;
-    private Date fechaPrestamo;
-    private Date fechaDevolucion;
+    private String fechaPrestamo;
+    private String fechaDevolucion;
 
-    public Prestamos(Persona persona, Libro libro, Date fechaPrestamo, Date fechaDevolucion) {
+    private ArrayList<Prestamos> listaPrestamos;
+
+    public Prestamos() {
+        listaPrestamos = new ArrayList<>();
+    }
+
+    public ArrayList<Prestamos> getListaPrestamos() {
+        return listaPrestamos;
+    }
+
+
+    public Prestamos(Libro libro, Persona persona, String fechaPrestamo, String fechaDevolucion) {
         this.persona = persona;
         this.libro = libro;
         this.fechaPrestamo = fechaPrestamo;
@@ -31,19 +43,19 @@ public class Prestamos {
         this.libro = libro;
     }
 
-    public Date getFechaPrestamo() {
+    public String getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setFechaPrestamo(Date fechaPrestamo) {
+    public void setFechaPrestamo(String fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
     }
 
-    public Date getFechaDevolucion() {
+    public String getFechaDevolucion() {
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(Date fechaDevolucion) {
+    public void setFechaDevolucion(String fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
 }
