@@ -20,6 +20,8 @@ public class Application extends javafx.application.Application {
 
     private static ArrayList<Alumnos> listaAlumnos = new ArrayList<>();
 
+    private static ObservableList<Prestamos> prestamos = FXCollections.observableArrayList();
+
     private static ObservableList<Libro> libros = FXCollections.observableArrayList();
 
     @Override
@@ -49,6 +51,10 @@ public class Application extends javafx.application.Application {
 
     public static Prestamos getPrestamo() {
         return prestamo;
+    }
+
+    public static ObservableList<Prestamos> getPrestamos() {
+        return prestamos;
     }
 
     public static ObservableList<Libro> getLibros() {

@@ -156,5 +156,17 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="prestarBtn" contentDisplay="TOP" layoutX="741.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#onClickedPrestarBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #DEBBF4;" text="Ver prestamos">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/klipartz.com.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

@@ -49,6 +49,9 @@ public class MenuSuperController {
     private Button mostrarusuBtn;
 
     @FXML
+    private Button prestarBtn;
+
+    @FXML
     private Button salirBtn;
 
     @FXML
@@ -195,7 +198,29 @@ public class MenuSuperController {
     }
 
     @FXML
-    void onClickedPrestamoBtn(MouseEvent event) {
+    void onClickedPrestamoBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("prestamo-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Hacer prestamos");
+        stage.show();
+    }
+
+    @FXML
+    void onClickedPrestarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("listaPrestamos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Mostrar lista de prestamos");
+        stage.show();
     }
 }
 

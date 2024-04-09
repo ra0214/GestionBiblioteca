@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Prestamos {
-    private Persona persona;
-    private Libro libro;
+    private String persona;
+    private String libro;
     private String fechaPrestamo;
     private String fechaDevolucion;
 
@@ -20,26 +20,26 @@ public class Prestamos {
     }
 
 
-    public Prestamos(Libro libro, Persona persona, String fechaPrestamo, String fechaDevolucion) {
+    public Prestamos(String libro, String persona, String fechaPrestamo, String fechaDevolucion) {
         this.persona = persona;
         this.libro = libro;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = fechaDevolucion;
     }
 
-    public Persona getPersona() {
+    public String getPersona() {
         return persona;
     }
 
-    public void setPersona(Persona persona) {
+    public void setPersona(String persona) {
         this.persona = persona;
     }
 
-    public Libro getLibro() {
+    public String getLibro() {
         return libro;
     }
 
-    public void setLibro(Libro libro) {
+    public void setLibro(String libro) {
         this.libro = libro;
     }
 

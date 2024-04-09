@@ -25,40 +25,80 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="182.0" layoutY="214.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el nombre del libro" textFill="#ff00ea">
-         <font>
-            <Font name="Century" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="195.0" layoutY="288.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el autor del libro" textFill="#ff00ea">
-         <font>
-            <Font name="Century" size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="nomlibroTxt" layoutX="449.0" layoutY="208.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro">
-         <font>
-            <Font name="Arial Bold Italic" size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="autorTxt" layoutX="449.0" layoutY="277.0" prefHeight="34.0" prefWidth="315.0" promptText="Autor del libro">
-         <font>
-            <Font name="Arial Bold Italic" size="14.0" />
-         </font>
-      </TextField>
-      <Button fx:id="eliminarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedEliminarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Buscar Libro" textFill="WHITE" AnchorPane.leftAnchor="213.6">
+      <Button fx:id="buscarBtn" layoutX="279.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#OnClickedBuscarBtn" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #9CF2ED;" text="Buscar Libro" textFill="WHITE" AnchorPane.leftAnchor="213.6">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="182.0" layoutY="353.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la editorial del libro" textFill="#ff00ea">
+      <Label fx:id="idLabel" layoutX="203.0" layoutY="111.0" prefHeight="23.0" prefWidth="186.0" text="Ingrese el ID del libro" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="editorialTxt1" layoutX="449.0" layoutY="347.0" prefHeight="34.0" prefWidth="315.0" promptText="Editorial del libro">
+      <TextField fx:id="idTxt" layoutX="504.0" layoutY="110.0" promptText="ID">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
+      <Label fx:id="tituloLabel" layoutX="154.0" layoutY="202.0" prefHeight="23.0" prefWidth="238.0" text="Título del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="autorlabel" layoutX="154.0" layoutY="270.0" prefHeight="23.0" prefWidth="238.0" text="Autor del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="editorialLabel" layoutX="154.0" layoutY="313.0" prefHeight="23.0" prefWidth="238.0" text="Editorial del libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fechaLabel" layoutX="147.0" layoutY="404.0" prefHeight="42.0" prefWidth="238.0" text="Fecha de publicación" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomlibroTxt" editable="false" layoutX="484.0" layoutY="196.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="autorTxt" editable="false" layoutX="484.0" layoutY="253.0" prefHeight="34.0" prefWidth="315.0" promptText="Autor del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editorialTxt" editable="false" layoutX="484.0" layoutY="307.0" prefHeight="34.0" prefWidth="315.0" promptText="Editorial del libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="fechaTxt" editable="false" layoutX="484.0" layoutY="404.0" prefHeight="34.0" prefWidth="315.0" promptText="Fecha de publicación" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="midTxt" editable="false" layoutX="483.0" layoutY="147.0" prefHeight="34.0" prefWidth="315.0" promptText="ID" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="midLabel" layoutX="154.0" layoutY="152.0" prefHeight="23.0" prefWidth="238.0" text="ID" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cantidadTxt" editable="false" layoutX="483.0" layoutY="355.0" prefHeight="34.0" prefWidth="315.0" promptText="Cantidad de libro" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="cantidadLabel" layoutX="147.0" layoutY="360.0" prefHeight="23.0" prefWidth="238.0" text="Cantidad de  libro" textFill="#ff00ea" visible="false">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -29,6 +29,9 @@ public class MenuAdminController {
     private Button prestamoBtn;
 
     @FXML
+    private Button prestarBtn;
+
+    @FXML
     private AnchorPane fondo;
 
     @FXML
@@ -78,7 +81,7 @@ public class MenuAdminController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarLibro-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarLibros-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
@@ -88,7 +91,7 @@ public class MenuAdminController {
 
     @FXML
     void onClickedMostrarusuBtn(MouseEvent event) throws IOException {
-        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        /*Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarAlumno-view.fxml"));
@@ -96,11 +99,33 @@ public class MenuAdminController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("Mostrar Usuarios");
+        stage.show();*/
+    }
+
+    @FXML
+    void onClickedPrestamoBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("prestamos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Hacer prestamos");
         stage.show();
     }
 
     @FXML
-    void onClickedPrestamoBtn(MouseEvent event) {
+    void onClickedPrestarBtn(MouseEvent event) throws IOException {
+        Stage currentStage = (Stage) fondo.getScene().getWindow();
+        currentStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("listasPrestamos-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Mostrar lista de prestamos");
+        stage.show();
     }
 }
 

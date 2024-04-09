@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class PrestamoController {
+public class PrestamosController {
 
     @FXML
     private Button agregarBtn;
@@ -62,20 +62,20 @@ public class PrestamoController {
         String fechaIn = fechainTxt.getText();
         String fechaFin = fechafinTxt.getText();
 
-       Prestamos prestamo = new Prestamos(titulo,nombre, fechaIn, fechaFin);
+        Prestamos prestamo = new Prestamos(titulo,nombre, fechaIn, fechaFin);
 
-       if (!Application.getPrestamos().contains(prestamo)) {
-           Application.getPrestamos().add(prestamo);
+        if (!Application.getPrestamos().contains(prestamo)) {
+            Application.getPrestamos().add(prestamo);
 
-           mostrarAlerta("Éxito", "Se ha agregado un nuevo prestamo.");
+            mostrarAlerta("Éxito", "Se ha agregado un nuevo prestamo.");
 
-           System.out.println("Nuevo prestamo: ");
-           System.out.println("Usuario: "+prestamo.getPersona());
-           System.out.println("Libro: "+prestamo.getLibro());
-           System.out.println("Fecha de prestamo: "+prestamo.getFechaPrestamo());
-           System.out.println("Fecha de devolución: "+prestamo.getFechaDevolucion());
-       }
-       limpiarCampos();
+            System.out.println("Nuevo prestamo: ");
+            System.out.println("Usuario: "+prestamo.getPersona());
+            System.out.println("Libro: "+prestamo.getLibro());
+            System.out.println("Fecha de prestamo: "+prestamo.getFechaPrestamo());
+            System.out.println("Fecha de devolución: "+prestamo.getFechaDevolucion());
+        }
+        limpiarCampos();
     }
 
     @FXML
@@ -83,11 +83,11 @@ public class PrestamoController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("menuSuper-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("menuAdmin-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Menú De Super Administrador");
+        stage.setTitle("Menú De Administrador");
         stage.show();
     }
 
