@@ -81,7 +81,7 @@ public class ActualizarDatosController {
 
     @FXML
     void OnClickedActualizarBtn(MouseEvent event) {
-        String id = this.idTxt.getText();
+        String id = this.midTxt.getText();
         String titulo = this.nomlibroTxt.getText();
         String autor = this.autorTxt.getText();
         String editorial = this.editorialTxt.getText();
@@ -89,12 +89,12 @@ public class ActualizarDatosController {
         String fech = this.fechaTxt.getText();
 
         if (!id.isEmpty() && !titulo.isEmpty() && !autor.isEmpty() && !editorial.isEmpty() && !cant.isEmpty() && !fech.isEmpty()) {
-            //ObservableList<Libro> list = Application.getLibros();
-            ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+            ObservableList<Libro> list = Application.getLibros();
+            //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
             //int idBuscado = Integer.parseInt(id);
 
-            for (int i =0; i<listaLibros.size();i++) {
-                Libro libro = listaLibros.get(i);
+            for (int i =0; i<list.size();i++) {
+                Libro libro = list.get(i);
                 if (libro.getId().equals(id)) {
 
                     libro.setId(id);
@@ -104,7 +104,7 @@ public class ActualizarDatosController {
                     libro.setCantidadDisponible(cant);
                     libro.setFechaPublicacion(fech);
 
-                    listaLibros.set(i, libro);
+                    list.set(i, libro);
 
                     System.out.println("Id: "+libro.getId());
                     System.out.println("Título: "+libro.getTitulo());
@@ -114,7 +114,7 @@ public class ActualizarDatosController {
                     System.out.println("Fecha: "+libro.getFechaPublicacion());
 
                     mostrarAlerta("Actualización Exitosa", "Los datos del libro han sido actualizados correctamente.");
-                    
+
                     limpiarCampos();
                     OnClickedRegresarBtn(null);
                     return;
