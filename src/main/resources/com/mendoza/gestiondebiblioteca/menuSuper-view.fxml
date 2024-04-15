@@ -19,7 +19,7 @@
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="agregarBtn" contentDisplay="TOP" layoutX="33.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#onClickedAgregarBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #DEBBF4;" text="Agregegar Libro">
+      <Button fx:id="agregarBtn" contentDisplay="TOP" layoutX="33.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#onClickedAgregarBtn" prefHeight="106.0" prefWidth="130.0" style="-fx-background-color: #DEBBF4;" text="Agregar Libro">
          <font>
             <Font name="Century Gothic Bold Italic" size="14.0" />
          </font>

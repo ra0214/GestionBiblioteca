@@ -81,29 +81,32 @@ public class ActualizarDatosController {
 
     @FXML
     void OnClickedActualizarBtn(MouseEvent event) {
-        String id = idTxt.getText();
-        String titulo = nomlibroTxt.getText();
-        String autor = autorTxt.getText();
-        String editorial = editorialTxt.getText();
-        String cantidad = cantidadTxt.getText();
-        String fecha = fechaTxt.getText();
+        String id = this.idTxt.getText();
+        String titulo = this.nomlibroTxt.getText();
+        String autor = this.autorTxt.getText();
+        String editorial = this.editorialTxt.getText();
+        String cant = this.cantidadTxt.getText();
+        String fech = this.fechaTxt.getText();
 
-        if (!id.isEmpty() && !titulo.isEmpty() && !autor.isEmpty() && !editorial.isEmpty() && !cantidad.isEmpty() && !fecha.isEmpty()) {
-            ObservableList<Libro> list = Application.getLibros();
-            //ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+        if (!id.isEmpty() && !titulo.isEmpty() && !autor.isEmpty() && !editorial.isEmpty() && !cant.isEmpty() && !fech.isEmpty()) {
+            //ObservableList<Libro> list = Application.getLibros();
+            ArrayList<Libro> listaLibros = Application.getLibro().getListaLibros();
+            //int idBuscado = Integer.parseInt(id);
 
-            //Libro libroActualizado = null;
-            for (int i =0; i<list.size();i++) {
-                Libro libro = list.get(i);
+            for (int i =0; i<listaLibros.size();i++) {
+                Libro libro = listaLibros.get(i);
                 if (libro.getId().equals(id)) {
+
+                    libro.setId(id);
                     libro.setTitulo(titulo);
                     libro.setAutor(autor);
                     libro.setEditorial(editorial);
-                    libro.setCantidadDisponible(cantidad);
-                    libro.setFechaPublicacion(fecha);
+                    libro.setCantidadDisponible(cant);
+                    libro.setFechaPublicacion(fech);
 
-                    list.set(i, libro);
+                    listaLibros.set(i, libro);
 
+                    System.out.println("Id: "+libro.getId());
                     System.out.println("Título: "+libro.getTitulo());
                     System.out.println("Autor: "+libro.getAutor());
                     System.out.println("Editorial: "+libro.getEditorial());
@@ -111,9 +114,9 @@ public class ActualizarDatosController {
                     System.out.println("Fecha: "+libro.getFechaPublicacion());
 
                     mostrarAlerta("Actualización Exitosa", "Los datos del libro han sido actualizados correctamente.");
-
-
+                    
                     limpiarCampos();
+                    OnClickedRegresarBtn(null);
                     return;
                 }
             }

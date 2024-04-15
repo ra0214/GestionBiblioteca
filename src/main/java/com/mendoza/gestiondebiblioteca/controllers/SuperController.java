@@ -38,7 +38,7 @@ public class SuperController {
         String usuarioText = usuario.getText();
         String contraseñaText = contraseña.getText();
 
-        if (usuarioText.equals("superAdministrador")) {
+        if (usuarioText.equals("super")) {
             if (contraseñaText.equals("2305")) {
                 Stage currentStage = (Stage) fondo.getScene().getWindow();
                 currentStage.close();

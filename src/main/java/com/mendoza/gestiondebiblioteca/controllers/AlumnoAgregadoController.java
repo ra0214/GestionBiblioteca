@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class AlumnoAgregadoController {
+public class AlumnoAgregadoController implements Initializable {
 
     @FXML
     private Button agregarBtn;
@@ -42,7 +42,25 @@ public class AlumnoAgregadoController {
     private TextField nombreTxt;
 
     @FXML
+    private Label nombreLabel;
+
+    @FXML
+    private Label apellidosLabel;
+
+    @FXML
+    private Label edadLabel;
+
+    @FXML
+    private Label gradoLabel;
+
+    @FXML
     private Button salirBtn;
+
+    @FXML
+    private Button verBtn;
+
+    @FXML
+    private Button volverBtn;
 
     @FXML
     private TableColumn apellidoColumn;
@@ -62,7 +80,7 @@ public class AlumnoAgregadoController {
     @FXML
     private TableColumn nombreColumn;
 
-    /*private ObservableList<Alumnos> alumnos;
+    /*private ObservableList<Alumnos> alumnos;*/
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -71,7 +89,45 @@ public class AlumnoAgregadoController {
         this.apellidoColumn.setCellValueFactory(new PropertyValueFactory<>("apellidos"));
         this.edadColumn.setCellValueFactory(new PropertyValueFactory<>("edad"));
         this.gradoColumn.setCellValueFactory(new PropertyValueFactory<>("grado"));
-    }*/
+        ObservableList<Persona> list = FXCollections.observableArrayList(Application.getListaAlumnos());
+        mostrarTable.setItems(list);
+    }
+
+    @FXML
+    void OnMouseClickedVerBtn(MouseEvent event) {
+        nombreTxt.setVisible(false);
+        nombreLabel.setVisible(false);
+        apellidosTxt.setVisible(false);
+        apellidosLabel.setVisible(false);
+        edadTxt.setVisible(false);
+        edadLabel.setVisible(false);
+        apellidosLabel.setVisible(false);
+        gradoTxt.setVisible(false);
+        gradoLabel.setVisible(false);
+        salirBtn.setVisible(false);
+        agregarBtn.setVisible(false);
+
+        mostrarTable.setVisible(true);
+        volverBtn.setVisible(true);
+    }
+
+    @FXML
+    void OnMouseClickedVolverBtn(MouseEvent event) {
+        nombreTxt.setVisible(true);
+        nombreLabel.setVisible(true);
+        apellidosTxt.setVisible(true);
+        apellidosLabel.setVisible(true);
+        edadTxt.setVisible(true);
+        edadLabel.setVisible(true);
+        apellidosLabel.setVisible(true);
+        gradoTxt.setVisible(true);
+        gradoLabel.setVisible(true);
+        salirBtn.setVisible(true);
+        agregarBtn.setVisible(true);
+
+        mostrarTable.setVisible(false);
+        volverBtn.setVisible(false);
+    }
 
     @FXML
     void OnClickedAgregarBtn(MouseEvent event) {
@@ -85,6 +141,7 @@ public class AlumnoAgregadoController {
         Alumnos alumno = new Alumnos(nombre, apellidos, edad, grado);
 
         if (alumnos.add(alumno)) {
+
             mostrarAlerta("Éxito", "Se ha agregado un nuevo usuario.");
 
             System.out.println("Se ha agregado un nuevo usuario:");

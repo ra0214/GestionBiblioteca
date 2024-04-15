@@ -97,7 +97,7 @@
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="verBtn" layoutX="582.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVerBtn" prefHeight="34.0" prefWidth="118.0" text="Ver tabla" />
+      <Button fx:id="verBtn" layoutX="582.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVerBtn" prefHeight="34.0" prefWidth="118.0" text="Ver tabla" visible="false" />
       <TableView fx:id="tabla" layoutX="192.0" layoutY="177.0" prefHeight="266.0" prefWidth="536.0" visible="false">
          <columns>
             <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />

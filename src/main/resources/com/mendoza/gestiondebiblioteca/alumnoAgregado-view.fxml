@@ -27,32 +27,32 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="52.0" layoutY="133.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea">
+      <Label fx:id="nombreLabel" layoutX="332.0" layoutY="143.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese el/los nombre" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="212.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese los apellidos" textFill="#ff00ea">
+      <Label fx:id="apellidosLabel" layoutX="332.0" layoutY="222.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese los apellidos" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="51.0" layoutY="288.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la edad del usuario" textFill="#ff00ea">
+      <Label fx:id="edadLabel" layoutX="331.0" layoutY="298.0" prefHeight="23.0" prefWidth="238.0" text="Ingrese la edad del usuario" textFill="#ff00ea">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTxt" layoutX="13.0" layoutY="166.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre(s)">
+      <TextField fx:id="nombreTxt" layoutX="293.0" layoutY="176.0" prefHeight="34.0" prefWidth="315.0" promptText="Nombre(s)">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="apellidosTxt" layoutX="13.0" layoutY="242.0" prefHeight="34.0" prefWidth="315.0" promptText="Apellidos">
+      <TextField fx:id="apellidosTxt" layoutX="293.0" layoutY="252.0" prefHeight="34.0" prefWidth="315.0" promptText="Apellidos">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="edadTxt" layoutX="13.0" layoutY="311.0" prefHeight="34.0" prefWidth="315.0" promptText="Edad">
+      <TextField fx:id="edadTxt" layoutX="293.0" layoutY="321.0" prefHeight="34.0" prefWidth="315.0" promptText="Edad">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
@@ -62,24 +62,26 @@
             <Font name="Century" size="18.0" />
          </font>
       </Button>
-      <Label alignment="TOP_LEFT" layoutX="52.0" layoutY="358.0" prefHeight="53.0" prefWidth="238.0" text="Ingrese el grado que cursa el alumno" textAlignment="CENTER" textFill="#ff00ea" wrapText="true">
+      <Label fx:id="gradoLabel" alignment="TOP_LEFT" layoutX="332.0" layoutY="368.0" prefHeight="53.0" prefWidth="238.0" text="Ingrese el grado que cursa el alumno" textAlignment="CENTER" textFill="#ff00ea" wrapText="true">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="gradoTxt" layoutX="12.0" layoutY="412.0" prefHeight="34.0" prefWidth="315.0" promptText="Grado">
+      <TextField fx:id="gradoTxt" layoutX="292.0" layoutY="422.0" prefHeight="34.0" prefWidth="315.0" promptText="Grado">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TableView fx:id="mostrarTable" layoutX="483.0" layoutY="200.0" prefHeight="200.0" prefWidth="379.0">
+      <TableView fx:id="mostrarTable" layoutX="168.0" layoutY="145.0" prefHeight="351.0" prefWidth="563.0" visible="false">
          <columns>
-            <TableColumn fx:id="idcolumn" prefWidth="75.0" text="Id" />
-            <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre" />
-            <TableColumn fx:id="apellidoColumn" prefWidth="75.0" text="Apellido" />
-            <TableColumn fx:id="edadColumn" prefWidth="75.0" text="Edad" />
-            <TableColumn fx:id="gradoColumn" prefWidth="75.0" text="Grado" />
+            <TableColumn fx:id="idcolumn" prefWidth="41.59991455078125" text="Id" />
+            <TableColumn fx:id="nombreColumn" prefWidth="184.00006103515625" text="Nombre" />
+            <TableColumn fx:id="apellidoColumn" prefWidth="165.60000610351562" text="Apellido" />
+            <TableColumn fx:id="edadColumn" prefWidth="78.4000244140625" text="Edad" />
+            <TableColumn fx:id="gradoColumn" prefWidth="95.20001220703125" text="Grado" />
          </columns>
       </TableView>
+      <Button fx:id="verBtn" layoutX="592.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVerBtn" prefHeight="34.0" prefWidth="118.0" text="Ver tabla" />
+      <Button fx:id="volverBtn" layoutX="592.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedVolverBtn" prefHeight="34.0" prefWidth="118.0" text="Volver" visible="false" />
    </children>
 </AnchorPane>
