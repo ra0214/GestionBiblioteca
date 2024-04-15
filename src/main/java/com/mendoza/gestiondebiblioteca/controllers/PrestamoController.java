@@ -62,7 +62,7 @@ public class PrestamoController {
         String fechaIn = fechainTxt.getText();
         String fechaFin = fechafinTxt.getText();
 
-       Prestamos prestamo = new Prestamos(titulo,nombre, fechaIn, fechaFin);
+       Prestamos prestamo = new Prestamos(nombre,titulo, fechaIn, fechaFin);
 
        if (!Application.getPrestamos().contains(prestamo)) {
            Application.getPrestamos().add(prestamo);

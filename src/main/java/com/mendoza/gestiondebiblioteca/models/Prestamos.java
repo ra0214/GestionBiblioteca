@@ -20,7 +20,7 @@ public class Prestamos {
     }
 
 
-    public Prestamos(String libro, String persona, String fechaPrestamo, String fechaDevolucion) {
+    public Prestamos(String persona, String libro, String fechaPrestamo, String fechaDevolucion) {
         this.persona = persona;
         this.libro = libro;
         this.fechaPrestamo = fechaPrestamo;

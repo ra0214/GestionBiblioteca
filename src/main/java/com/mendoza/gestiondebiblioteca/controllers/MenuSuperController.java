@@ -189,11 +189,11 @@ public class MenuSuperController {
         Stage currentStage = (Stage) fondo.getScene().getWindow();
         currentStage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("mostrarUsuarios-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("prestamoEliminar-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Mostrar Usuarios");
+        stage.setTitle("Eliminar Prestamos");
         stage.show();
     }
 
