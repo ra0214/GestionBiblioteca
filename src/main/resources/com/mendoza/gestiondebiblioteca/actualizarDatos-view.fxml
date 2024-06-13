@@ -95,7 +95,7 @@
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="midTxt" layoutX="459.0" layoutY="142.0" prefHeight="34.0" prefWidth="315.0" promptText="ID" visible="false">
+      <TextField fx:id="midTxt" editable="false" layoutX="459.0" layoutY="142.0" prefHeight="34.0" prefWidth="315.0" promptText="ID" visible="false">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>

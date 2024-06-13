@@ -3,6 +3,7 @@ module com.mendoza.gestiondebiblioteca {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens com.mendoza.gestiondebiblioteca.models to javafx.base;
     opens com.mendoza.gestiondebiblioteca to javafx.fxml;

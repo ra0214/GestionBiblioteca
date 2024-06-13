@@ -37,7 +37,7 @@ public class AlumnoEliminadoController {
         String nombre = nombreTxt.getText();
         String apellidos = apellidosTxt.getText();
 
-        ArrayList<Alumnos> listaAlumnos = Application.getPersona().getListaAlumnos();
+        ArrayList<Alumnos> listaAlumnos = Application.getPersona().getListaAlumnos()    ;
 
         Alumnos alumnoAEliminar = null;
         for (Alumnos alumno : listaAlumnos) {

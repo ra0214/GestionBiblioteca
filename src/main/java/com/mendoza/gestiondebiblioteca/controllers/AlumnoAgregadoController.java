@@ -1,5 +1,9 @@
 package com.mendoza.gestiondebiblioteca.controllers;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 import com.mendoza.gestiondebiblioteca.Application;
 import com.mendoza.gestiondebiblioteca.models.Alumnos;
 import com.mendoza.gestiondebiblioteca.models.Persona;
@@ -131,6 +135,7 @@ public class AlumnoAgregadoController implements Initializable {
 
     @FXML
     void OnClickedAgregarBtn(MouseEvent event) {
+        
         ArrayList<Alumnos> alumnos = Application.getPersona().getListaAlumnos();
 
         String nombre = nombreTxt.getText();
